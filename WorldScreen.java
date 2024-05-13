@@ -2,6 +2,7 @@ import javax.swing.*;
 
 public class WorldScreen extends JPanel implements Runnable{
     Thread thread;
+    MainCharacter MC;
     public WorldScreen(){
         //soon will add in the world, items, and characters, here
         thread = new Thread(this);
@@ -11,7 +12,8 @@ public class WorldScreen extends JPanel implements Runnable{
     @Override
     public void run(){
         while (thread != null){
-            //add key codes that change direction
+            long systemTime = system.time();
+            //MC.keyCode();add key codes that change direction
             repaint();
         }
 
@@ -19,6 +21,6 @@ public class WorldScreen extends JPanel implements Runnable{
     }
     public void paintComponent(Graphics g){
         super(g);
-        //new spawnMainCharacter(g)
+        //MC = new MainCharacter(g);
     
 }
