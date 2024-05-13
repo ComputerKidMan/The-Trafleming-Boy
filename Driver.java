@@ -10,8 +10,11 @@ public class Driver {
     public static JFrame panel = new JFrame("The Trafleming Boy");
 
     public static void main(String[] args) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+        panel = new JFrame("The Trafleming Boy");
         panel.setSize(1920, 1200);
-        panel.setContentPane(new GameScreen());
+        new GameScreen();
+        panel.setContentPane(GameScreen.gs);
         panel.setVisible(true);
     }
+
 }
