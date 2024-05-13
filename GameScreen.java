@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.*;
 import java.io.IOException;
 
-public class GameScreen extends JPanel {
+public class GameScreen extends JPanel {//later try and change JPanel with Driver
     public GameScreen() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         setBackground(new Color(14,4,49));
         setLayout(new GridLayout(2,3));
@@ -30,6 +30,7 @@ public class GameScreen extends JPanel {
     private class PlayButtonListener implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
+            //Jpanel.remove(GameScreen);
             Driver.panel.setContentPane(new WorldScreen());
         }
     }
