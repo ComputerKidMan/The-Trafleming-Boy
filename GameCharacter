@@ -1,0 +1,6 @@
+public class GameCharacter{
+public GameCharacter(int[][] location, int size, Color color, int speed, int hp){
+	//Create a Game Character with the given arguments
+}
+
+}
