@@ -1,0 +1,39 @@
+private class Key extends KeyAdapter
+{
+	boolean right = false;
+	boolean up = false;
+	boolean down = false;
+	boolean left = false;
+	MainCharacter MC = MainCharacter();
+	
+public void keyPressed(KeyEvent e)
+{
+if(e.getKeyCode() == KeyEvent.VK_RIGHT && !right)
+{
+}
+
+
+if(e.getKeyCode() == KeyEvent.VK_UP && !up)
+{
+}
+
+
+if(e.getKeyCode() == KeyEvent.VK_DOWN && !down)
+{
+}
+
+
+if(e.getKeyCode() == KeyEvent.VK_LEFT && !left)
+{
+MC.setLocation([][]);
+}
+	}
+	public void keyReleased(KeyEvent e)
+	{
+if(e.getKeyCode() == KeyEvent.VK_LEFT)
+{
+sq.setDX(sq.getDX() + 2);
+left = false;
+}
+}
+
