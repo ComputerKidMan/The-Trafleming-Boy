@@ -1,15 +1,16 @@
-public class MainCharacter extends GameCharacter{
+public class TheTraflemingBoy extends GameCharacter{
 private int size;
-private Color color;
 private int speed;
-int x = 0;
+int x =;
 int y  = 0;
-private int[][] location = [x][y];
 private int hp;
-	public MainCharacter(){
-		super([0][0], 100, new Color(155,155,25), 2, 100);
+	public TheTraflemingBoy(int x, int y, int size, int size, int speed, int hp){
+		this.x = x;
+		this.y = y;
+		this.size = size;
+		this.speed = speed;
+		this.hp = hp;
 		}
-	}
 	public void setSize(int size){
 		this.size = size;
 		}
@@ -25,6 +26,8 @@ private int hp;
 	public void setHP(int hp){
 		this.hp = hp;
 		}
+	public drawMe(Graphics g2){
+		g2.drawImage(new ImageIcon("MainCharacter.png", x, y, size, size, null);
 	}
 }
 
