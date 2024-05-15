@@ -27,3 +27,28 @@ private int hp;
 		}
 	}
 }
+
+class Key extends KeyAdapter
+{
+	boolean right = false;
+	boolean up = false;
+	boolean down = false;
+	boolean left = false;
+	MainCharacter MC = MainCharacter();
+	
+public void keyPressed(KeyEvent e)
+{
+if(e.getKeyCode() == KeyEvent.VK_RIGHT && !right)
+{
+}
+
+
+if(e.getKeyCode() == KeyEvent.VK_UP && !up)
+{
+}
+
+
+if(e.getKeyCode() == KeyEvent.VK_DOWN && !down)
+{
+}
+
