@@ -7,9 +7,9 @@ public class WorldScreen extends JPanel implements Runnable {
 
     public WorldScreen() {
         //soon will add in the world, items, and characters, here
-        JPanel ws = new JPanel();
-        JLabel wsl = new JLabel("Testing Testing Testing");
-        ws.add(wsl);
+        MC = new TheTraflemingBoy(50, 50, 50, 50, 3, 100);
+        repaint();
+        revalidate();
         thread = new Thread(this);
         thread.start();
         //run();
@@ -37,8 +37,7 @@ public class WorldScreen extends JPanel implements Runnable {
     }
 
     public void paintComponent(Graphics g) {
-        //super(g);
-        //MC = new TheTraflemingBoy(g);
-
+        Graphics2D g2 = (Graphics2D)g2;
+        MC.drawMe(g2);
     }
 }
