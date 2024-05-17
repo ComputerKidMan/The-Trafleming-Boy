@@ -15,5 +15,8 @@ public class PlayButtonListener extends JPanel implements ActionListener {
             revalidate();
             Driver.panel.pack();
             Driver.panel.setSize(new Dimension(1920, 1200));
-            }
+            Util.ws = new WorldScreen();
+
+
+        }
         }
