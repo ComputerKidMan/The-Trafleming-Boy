@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
+import java.util.Random;
 
 
 public class WorldScreen extends JPanel implements Runnable, KeyListener {
@@ -14,14 +15,14 @@ public class WorldScreen extends JPanel implements Runnable, KeyListener {
     private Graphics myBuffer;
     TheTraflemingBoy MC;
     Key keyCode;
-    TileDraw tileDraw = new TileDraw();
+    Tile tile = new Tile();
     boolean down;
     boolean left;
 
 
 
     public WorldScreen() {
-        TheTraflemingBoy.setValues(900,550,100,3,100);
+        TheTraflemingBoy.setValues(900,550,100,5,100);
         keyCode = new Key();
         //soon will add in the world, items, and characters, here
         /*JPanel ws = new JPanel();
@@ -57,10 +58,15 @@ public class WorldScreen extends JPanel implements Runnable, KeyListener {
         }
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D)g;
-        for(int i = 0; i < 1000; i = i+ 10){
-            //tileDraw.drawMe(new Image("GrassPixel.png"), i, i,i, null);
+        for(int i = 0; i < 1920; i = i+ 32){
+            for(int ii = 0; ii < 2000; ii = ii+32) {
+                tile.drawMe(g2);
+            }
         }
+
         TheTraflemingBoy.drawMe(g2);
+        g2.dispose();
+
 
 
     }
