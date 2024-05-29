@@ -60,7 +60,7 @@ public class WorldScreen extends JPanel implements Runnable, KeyListener {
         Graphics2D g2 = (Graphics2D)g;
         for(int i = 0; i < 1920; i = i+ 32){
             for(int ii = 0; ii < 2000; ii = ii+32) {
-                tile.drawMe(g2);
+                tile.drawMe(g2, i, ii);
             }
         }
 
