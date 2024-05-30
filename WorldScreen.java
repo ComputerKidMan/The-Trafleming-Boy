@@ -10,7 +10,8 @@ public class WorldScreen extends JPanel implements Runnable, KeyListener {
     boolean right;
     boolean up;
 
-    Thread thread;
+    Thread thread1;
+    Thread thread2;
     private BufferedImage myImage;
     private Graphics myBuffer;
     TheTraflemingBoy MC;
@@ -32,13 +33,15 @@ public class WorldScreen extends JPanel implements Runnable, KeyListener {
 
         addKeyListener(this);
         this.setFocusable(true);
-        thread = new Thread(this);
-        thread.start();
+        thread1 = new Thread(this);
+        thread2 = new Thread(this);
+        thread1.start();
+        thread2.start();
     }
 
 
     public void run() {
-        while (thread != null) {
+        while (thread1 != null) {
             //try {
             //new PlayTheme("MainTheme.wav");
             System.out.println();
