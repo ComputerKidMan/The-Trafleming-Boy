@@ -1,0 +1,16 @@
+import java.awt.*;
+import java.util.Random;
+
+public class UpdateThread extends Thread{
+    public Graphics2D g2;
+
+    @Override
+    public void run() {
+        //Tile.drawMe(, new Random().nextInt(5), 36, new Random().nextInt(2200), new Random().nextInt(1980));
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        }
+    }
