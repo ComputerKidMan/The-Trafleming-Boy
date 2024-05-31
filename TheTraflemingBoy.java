@@ -20,6 +20,6 @@ public class TheTraflemingBoy extends GameCharacter {
     }
 
     public static void drawMe(Graphics2D g2){
-        g2.drawImage(new ImageIcon("MainCharacterFront.png").getImage(), x, y, size, size, null);
+        GameCharacter.drawCharacter(g2, 0, x, y, size);
     }
 }
