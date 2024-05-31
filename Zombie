@@ -1,0 +1,7 @@
+import java.awt.*;
+
+public class Zombie extends GameCharacter{
+    public Zombie(Graphics2D g2, int x, int y, int size){
+        GameCharacter.drawCharacter(g2, 1, x, y, size);
+    }
+}
