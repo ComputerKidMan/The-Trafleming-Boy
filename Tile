@@ -12,21 +12,13 @@ public class Tile {
     int bootProbability;
     int grassPowerProbability;
     int firePowerProbability;
-    public Tile(){
-        randInt = new Random().nextInt(2);
-        randInt1 = new Random().nextInt(2500);
-
-    }
 
 
 
-    Image[] getTile = {new ImageIcon("GrassPixel.png").getImage(), new ImageIcon("WaterPixel.png").getImage(), };
-    public void drawMe(Graphics2D g2, int type, int spacing, int x, int y){
+
+    static Image[] getTile = {new ImageIcon("GrassPixel.png").getImage(), new ImageIcon("BootPixels.png").getImage(), new ImageIcon("GrassPixel.png").getImage(), new ImageIcon("WaterPixel.png").getImage(), new ImageIcon("FirePower.png").getImage()};
+    public static void drawMe(Graphics2D g2, int type, int spacing, int x, int y){
         g2.drawImage(getTile[type], x, y, spacing, spacing, null);
     }
-    public void drawMe(Graphics2D g2, int x, int y){
-        for(int i = 0; i < 2500; i = i + 32){
-            g2.drawImage(getTile[randInt], x, y, 32, 32, null) ;
-        }
-    }
+
 }
