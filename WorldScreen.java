@@ -16,7 +16,6 @@ public class WorldScreen extends JPanel implements Runnable {
     private Graphics myBuffer;
     public boolean threadsActivated = false;
     TheTraflemingBoy MC;
-    int[][] xy;
     public JPanel ws;
     public static Graphics2D g2;
 
