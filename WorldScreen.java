@@ -35,6 +35,7 @@ public class WorldScreen extends JPanel implements Runnable {
         wsThread.start();
         musicThread.start();
         updateThread.start();
+        spawnerThread.start();
     }
 
 
