@@ -22,6 +22,7 @@ public class WorldScreen extends JPanel implements Runnable {
 
 
     public WorldScreen() {
+        MC = new TheTraflemingBoy();
         repaint();
         addKeyListener(new Update());
         TheTraflemingBoy.setValues(900,550,100,5,100);
