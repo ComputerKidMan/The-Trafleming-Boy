@@ -9,6 +9,7 @@ public class PlayButtonListener extends JPanel implements ActionListener {
             GameScreen.gs = null;
             try {
                 ws = new WorldScreen();
+              Driver.panel.setContentPane(ws);
                 ws.addKeyListener(new Update());
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
