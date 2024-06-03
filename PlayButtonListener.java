@@ -4,10 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PlayButtonListener extends JPanel implements ActionListener {
+  public static JPanel ws;
         public void actionPerformed(ActionEvent e) {
             GameScreen.gs = null;
             try {
-                Driver.panel.setContentPane(new WorldScreen());
+                ws = new WorldScreen();
+                ws.addKeyListener(new Update());
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
             }
