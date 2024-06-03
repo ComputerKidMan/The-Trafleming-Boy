@@ -23,17 +23,17 @@ public class WorldScreen extends JPanel implements Runnable {
 
     public WorldScreen() {
         repaint();
-
+        addKeyListener(new Update());
         TheTraflemingBoy.setValues(900,550,100,5,100);
         setFocusable(true);
         threadsActivated = true;
         wsThread = new Thread(this);
-        updateThread = new UpdateThread();
         musicThread = new MusicThread();
+        updateThread = new UpdateThread();
         spawnerThread = new SpawnerThread();
         wsThread.start();
-        updateThread.start();
         musicThread.start();
+        updateThread.start();
     }
 
 
@@ -49,11 +49,11 @@ public class WorldScreen extends JPanel implements Runnable {
         g2 = (Graphics2D)g;
         for(int i = 0; i < 1920; i = i+ 32){
             for(int ii = 0; ii < 2000; ii = ii+32) {
-                    Tile.drawMe(g2, 0, 32, i, ii);
+                   Tile.drawMe(g2, 0, 32, i, ii);
             }
         }
 
-        TheTraflemingBoy.drawMe(g2);
+        MC.drawMe(g2);
         g2.dispose();
 
 
