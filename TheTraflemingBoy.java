@@ -19,7 +19,7 @@ public class TheTraflemingBoy extends GameCharacter {
         TheTraflemingBoy.hp = hp;
     }
 
-    public static void drawMe(Graphics2D g2){
-        GameCharacter.drawCharacter(g2, 0, x, y, size);
+    public void drawMe(Graphics2D g2){
+        super.drawCharacter(g2, 0, x, y, size);
     }
 }
